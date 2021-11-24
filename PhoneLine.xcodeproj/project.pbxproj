@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		9192605B274E0A9E00BBD5B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192605A274E0A9E00BBD5B4 /* AppDelegate.swift */; };
 		9192605D274E0A9E00BBD5B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192605C274E0A9E00BBD5B4 /* SceneDelegate.swift */; };
-		9192605F274E0A9E00BBD5B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192605E274E0A9E00BBD5B4 /* ViewController.swift */; };
 		91926062274E0A9E00BBD5B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91926060274E0A9E00BBD5B4 /* Main.storyboard */; };
 		91926064274E0A9F00BBD5B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91926063274E0A9F00BBD5B4 /* Assets.xcassets */; };
 		91926067274E0A9F00BBD5B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91926065274E0A9F00BBD5B4 /* LaunchScreen.storyboard */; };
+		9192606F274E0F5E00BBD5B4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192606E274E0F5E00BBD5B4 /* HomeViewController.swift */; };
+		91926074274E20DA00BBD5B4 /* BorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91926072274E20DA00BBD5B4 /* BorderViewController.swift */; };
+		91926075274E20DA00BBD5B4 /* BorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91926073274E20DA00BBD5B4 /* BorderViewController.xib */; };
+		F5706609B4C0EF8AA56FD8C7 /* Pods_PhoneLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1201FF742A0BE184BED9E2FD /* Pods_PhoneLine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1201FF742A0BE184BED9E2FD /* Pods_PhoneLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91926057274E0A9E00BBD5B4 /* PhoneLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9192605A274E0A9E00BBD5B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9192605C274E0A9E00BBD5B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9192605E274E0A9E00BBD5B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91926061274E0A9E00BBD5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91926063274E0A9F00BBD5B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91926066274E0A9F00BBD5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91926068274E0A9F00BBD5B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9192606E274E0F5E00BBD5B4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		91926072274E20DA00BBD5B4 /* BorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderViewController.swift; sourceTree = "<group>"; };
+		91926073274E20DA00BBD5B4 /* BorderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderViewController.xib; sourceTree = "<group>"; };
+		E03791152C83110EB67BE203 /* Pods-PhoneLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneLine.release.xcconfig"; path = "Target Support Files/Pods-PhoneLine/Pods-PhoneLine.release.xcconfig"; sourceTree = "<group>"; };
+		EB880DF4422526E0037C8477 /* Pods-PhoneLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneLine.debug.xcconfig"; path = "Target Support Files/Pods-PhoneLine/Pods-PhoneLine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5706609B4C0EF8AA56FD8C7 /* Pods_PhoneLine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				91926059274E0A9E00BBD5B4 /* PhoneLine */,
 				91926058274E0A9E00BBD5B4 /* Products */,
+				9B32EF42910E180FF6DD2467 /* Pods */,
+				AA2B5E7C3301BD44181E51BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +67,51 @@
 		91926059274E0A9E00BBD5B4 /* PhoneLine */ = {
 			isa = PBXGroup;
 			children = (
+				91926071274E20AD00BBD5B4 /* VC */,
+				91926070274E159B00BBD5B4 /* XIB */,
 				9192605A274E0A9E00BBD5B4 /* AppDelegate.swift */,
 				9192605C274E0A9E00BBD5B4 /* SceneDelegate.swift */,
-				9192605E274E0A9E00BBD5B4 /* ViewController.swift */,
+				9192606E274E0F5E00BBD5B4 /* HomeViewController.swift */,
 				91926060274E0A9E00BBD5B4 /* Main.storyboard */,
 				91926063274E0A9F00BBD5B4 /* Assets.xcassets */,
 				91926065274E0A9F00BBD5B4 /* LaunchScreen.storyboard */,
 				91926068274E0A9F00BBD5B4 /* Info.plist */,
 			);
 			path = PhoneLine;
+			sourceTree = "<group>";
+		};
+		91926070274E159B00BBD5B4 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		91926071274E20AD00BBD5B4 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				91926072274E20DA00BBD5B4 /* BorderViewController.swift */,
+				91926073274E20DA00BBD5B4 /* BorderViewController.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		9B32EF42910E180FF6DD2467 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB880DF4422526E0037C8477 /* Pods-PhoneLine.debug.xcconfig */,
+				E03791152C83110EB67BE203 /* Pods-PhoneLine.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AA2B5E7C3301BD44181E51BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1201FF742A0BE184BED9E2FD /* Pods_PhoneLine.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9192606B274E0A9F00BBD5B4 /* Build configuration list for PBXNativeTarget "PhoneLine" */;
 			buildPhases = (
+				2DEC7569AB10128E4097F44F /* [CP] Check Pods Manifest.lock */,
 				91926053274E0A9E00BBD5B4 /* Sources */,
 				91926054274E0A9E00BBD5B4 /* Frameworks */,
 				91926055274E0A9E00BBD5B4 /* Resources */,
+				8D20E2A7F2F3FECAB98ACFA7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,20 +176,64 @@
 			files = (
 				91926067274E0A9F00BBD5B4 /* LaunchScreen.storyboard in Resources */,
 				91926064274E0A9F00BBD5B4 /* Assets.xcassets in Resources */,
+				91926075274E20DA00BBD5B4 /* BorderViewController.xib in Resources */,
 				91926062274E0A9E00BBD5B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DEC7569AB10128E4097F44F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhoneLine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D20E2A7F2F3FECAB98ACFA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhoneLine/Pods-PhoneLine-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhoneLine/Pods-PhoneLine-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhoneLine/Pods-PhoneLine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91926053274E0A9E00BBD5B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9192605F274E0A9E00BBD5B4 /* ViewController.swift in Sources */,
 				9192605B274E0A9E00BBD5B4 /* AppDelegate.swift in Sources */,
 				9192605D274E0A9E00BBD5B4 /* SceneDelegate.swift in Sources */,
+				91926074274E20DA00BBD5B4 /* BorderViewController.swift in Sources */,
+				9192606F274E0F5E00BBD5B4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +377,7 @@
 		};
 		9192606C274E0A9F00BBD5B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB880DF4422526E0037C8477 /* Pods-PhoneLine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,6 +391,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,12 +401,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9192606D274E0A9F00BBD5B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E03791152C83110EB67BE203 /* Pods-PhoneLine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,6 +421,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +431,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
