@@ -5,4 +5,7 @@ use_frameworks!
 target 'PhoneLine' do
     pod 'RxSwift'
     pod 'RxGesture'
+    pod 'CropPickerView'
+    pod 'ColorCubeSwift'
+
 end

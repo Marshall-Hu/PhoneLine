@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BorderViewController" customModule="PhoneLine" customModuleProvider="target">
             <connections>
+                <outlet property="cropPickerView" destination="nLO-44-M6i" id="SYE-hN-Yl2"/>
                 <outlet property="selectImageView" destination="0FA-pt-b3A" id="2Sd-CG-nnR"/>
                 <outlet property="templateImageView" destination="nJn-3Z-zog" id="bCf-UQ-BsR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,12 +23,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2O1-wR-twT">
-                    <rect key="frame" x="20" y="238" width="374" height="180"/>
+                    <rect key="frame" x="20" y="64" width="374" height="180"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nJn-3Z-zog">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nJn-3Z-zog">
                             <rect key="frame" x="0.0" y="0.0" width="177" height="180"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0FA-pt-b3A">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0FA-pt-b3A">
                             <rect key="frame" x="197" y="0.0" width="177" height="180"/>
                         </imageView>
                     </subviews>
@@ -36,19 +37,31 @@
                         <constraint firstAttribute="height" constant="180" id="gy2-hG-PGh"/>
                     </constraints>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLO-44-M6i" customClass="CropPickerView" customModule="CropPickerView">
+                    <rect key="frame" x="20" y="252" width="374" height="417"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="417" id="a9i-dW-xRX"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
             <constraints>
                 <constraint firstItem="2O1-wR-twT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Bd0-vg-cYx"/>
+                <constraint firstItem="nLO-44-M6i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Gcm-xh-TN2"/>
+                <constraint firstItem="nLO-44-M6i" firstAttribute="top" secondItem="2O1-wR-twT" secondAttribute="bottom" constant="8" symbolic="YES" id="KaL-Ud-8gu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2O1-wR-twT" secondAttribute="trailing" constant="20" id="O2T-ad-v8f"/>
-                <constraint firstItem="2O1-wR-twT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jsR-Mg-6o2"/>
-                <constraint firstItem="2O1-wR-twT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-120" id="t74-Iw-ThD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nLO-44-M6i" secondAttribute="trailing" constant="20" id="lfl-IB-3Ps"/>
+                <constraint firstItem="2O1-wR-twT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="q4E-6J-mMZ"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="152"/>
+            <point key="canvasLocation" x="137.68115942028987" y="150.66964285714286"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

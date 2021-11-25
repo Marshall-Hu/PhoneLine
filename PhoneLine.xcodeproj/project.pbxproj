@@ -15,6 +15,9 @@
 		9192606F274E0F5E00BBD5B4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192606E274E0F5E00BBD5B4 /* HomeViewController.swift */; };
 		91926074274E20DA00BBD5B4 /* BorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91926072274E20DA00BBD5B4 /* BorderViewController.swift */; };
 		91926075274E20DA00BBD5B4 /* BorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91926073274E20DA00BBD5B4 /* BorderViewController.xib */; };
+		91926079274E4A7C00BBD5B4 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91926078274E4A7C00BBD5B4 /* OpenCVWrapper.mm */; };
+		9192607B274E4A9800BBD5B4 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9192607A274E4A9800BBD5B4 /* opencv2.framework */; };
+		91926082274F1AA900BBD5B4 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91926081274F1AA900BBD5B4 /* ImageHelper.swift */; };
 		F5706609B4C0EF8AA56FD8C7 /* Pods_PhoneLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1201FF742A0BE184BED9E2FD /* Pods_PhoneLine.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,11 @@
 		9192606E274E0F5E00BBD5B4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		91926072274E20DA00BBD5B4 /* BorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderViewController.swift; sourceTree = "<group>"; };
 		91926073274E20DA00BBD5B4 /* BorderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderViewController.xib; sourceTree = "<group>"; };
+		91926077274E4A7C00BBD5B4 /* PhoneLine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneLine-Bridging-Header.h"; sourceTree = "<group>"; };
+		91926078274E4A7C00BBD5B4 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		9192607A274E4A9800BBD5B4 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		9192607E274E4AC800BBD5B4 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		91926081274F1AA900BBD5B4 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		E03791152C83110EB67BE203 /* Pods-PhoneLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneLine.release.xcconfig"; path = "Target Support Files/Pods-PhoneLine/Pods-PhoneLine.release.xcconfig"; sourceTree = "<group>"; };
 		EB880DF4422526E0037C8477 /* Pods-PhoneLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneLine.debug.xcconfig"; path = "Target Support Files/Pods-PhoneLine/Pods-PhoneLine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9192607B274E4A9800BBD5B4 /* opencv2.framework in Frameworks */,
 				F5706609B4C0EF8AA56FD8C7 /* Pods_PhoneLine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +76,8 @@
 		91926059274E0A9E00BBD5B4 /* PhoneLine */ = {
 			isa = PBXGroup;
 			children = (
+				91926080274F1A9600BBD5B4 /* ImageHelper */,
+				91926076274E4A5A00BBD5B4 /* OpenCV */,
 				91926071274E20AD00BBD5B4 /* VC */,
 				91926070274E159B00BBD5B4 /* XIB */,
 				9192605A274E0A9E00BBD5B4 /* AppDelegate.swift */,
@@ -96,19 +107,37 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		91926076274E4A5A00BBD5B4 /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				9192607E274E4AC800BBD5B4 /* OpenCVWrapper.h */,
+				91926078274E4A7C00BBD5B4 /* OpenCVWrapper.mm */,
+				91926077274E4A7C00BBD5B4 /* PhoneLine-Bridging-Header.h */,
+			);
+			path = OpenCV;
+			sourceTree = "<group>";
+		};
+		91926080274F1A9600BBD5B4 /* ImageHelper */ = {
+			isa = PBXGroup;
+			children = (
+				91926081274F1AA900BBD5B4 /* ImageHelper.swift */,
+			);
+			path = ImageHelper;
+			sourceTree = "<group>";
+		};
 		9B32EF42910E180FF6DD2467 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				EB880DF4422526E0037C8477 /* Pods-PhoneLine.debug.xcconfig */,
 				E03791152C83110EB67BE203 /* Pods-PhoneLine.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		AA2B5E7C3301BD44181E51BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9192607A274E4A9800BBD5B4 /* opencv2.framework */,
 				1201FF742A0BE184BED9E2FD /* Pods_PhoneLine.framework */,
 			);
 			name = Frameworks;
@@ -148,6 +177,7 @@
 				TargetAttributes = {
 					91926056274E0A9E00BBD5B4 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -231,9 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9192605B274E0A9E00BBD5B4 /* AppDelegate.swift in Sources */,
+				91926079274E4A7C00BBD5B4 /* OpenCVWrapper.mm in Sources */,
 				9192605D274E0A9E00BBD5B4 /* SceneDelegate.swift in Sources */,
 				91926074274E20DA00BBD5B4 /* BorderViewController.swift in Sources */,
 				9192606F274E0F5E00BBD5B4 /* HomeViewController.swift in Sources */,
+				91926082274F1AA900BBD5B4 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +413,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3295JJ3P97;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhoneLine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -400,6 +437,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Marshaii.PhoneLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PhoneLine/OpenCV/PhoneLine-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -411,9 +450,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3295JJ3P97;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhoneLine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -430,6 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Marshaii.PhoneLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PhoneLine/OpenCV/PhoneLine-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

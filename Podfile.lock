@@ -1,4 +1,6 @@
 PODS:
+  - ColorCubeSwift (1.1.0)
+  - CropPickerView (0.3.0)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
@@ -10,22 +12,28 @@ PODS:
   - RxSwift (6.2.0)
 
 DEPENDENCIES:
+  - ColorCubeSwift
+  - CropPickerView
   - RxGesture
   - RxSwift
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - ColorCubeSwift
+    - CropPickerView
     - RxCocoa
     - RxGesture
     - RxRelay
     - RxSwift
 
 SPEC CHECKSUMS:
+  ColorCubeSwift: e988a376ebdadf63d68c7c4b17252fe30b83c96b
+  CropPickerView: 7149fca438041a7a78d88e88dd0de805c182fc6a
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxGesture: f059f2aeef966fb17dad56ee440e76410f10e55f
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
-PODFILE CHECKSUM: 47e24fa5263c4db72f8fbe6159536452e21342b0
+PODFILE CHECKSUM: 02ec57c838b9657a1a2dc054d5f206f4ce264659
 
 COCOAPODS: 1.11.2
