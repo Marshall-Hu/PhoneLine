@@ -15,7 +15,7 @@ using namespace std;
 
 @implementation OpenCVWrapper : NSObject
 
-+ (UIImage *)processImageWithOpenCV:(UIImage*)inputImage mainColor:(UIColor*)inputColor {
++ (UIImage *)processImageWithOpenCV:(UIImage*)inputImage mainColor:(UIColor*)inputColor lineSize:(CGFloat) inputSize {
     Mat mat;
     UIImageToMat(inputImage, mat);
     NSLog(@"%f :%f", inputImage.size.width,inputImage.size.height);
@@ -31,6 +31,7 @@ using namespace std;
     
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
+            
             if (mat.at<Vec4b>(i,j)[0] == 0 && mat.at<Vec4b>(i,j)[1] == 0 && mat.at<Vec4b>(i,j)[2] == 0) {
                 //NSLog(@"去除白色背景");
                 mat.at<Vec4b>(i,j)[3] = 0;
@@ -41,7 +42,7 @@ using namespace std;
             }
         }
     }
-    Mat dilateElement = getStructuringElement(MORPH_ELLIPSE, cv::Size(15, 15)); // 获得内核
+    Mat dilateElement = getStructuringElement(MORPH_ELLIPSE, cv::Size(inputSize, inputSize)); // 获得内核
     dilate(mat, mat, dilateElement); // 膨胀函数
     return MatToUIImage(mat);
 }

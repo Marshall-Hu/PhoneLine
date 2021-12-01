@@ -10,7 +10,7 @@ import RxSwift
 import RxGesture
 import CropPickerView
 import ColorCubeSwift
-
+import ColorSlider
 
 class BorderViewController: UIViewController {
 
@@ -18,6 +18,9 @@ class BorderViewController: UIViewController {
     @IBOutlet weak var selectImageView: UIImageView!
     @IBOutlet weak var cropPickerView: CropPickerView!
     
+    @IBOutlet weak var colorSliderContainer: UIView!
+    
+    fileprivate var originSelectTemplateImage:UIImage?
     fileprivate var templateImage:UIImage?
     fileprivate var desktopImage:UIImage?
 
@@ -25,9 +28,25 @@ class BorderViewController: UIViewController {
     let picker = UIImagePickerController()
 
     let colorCube = CCColorCube()
+    var selectBorderColor = UIColor()
+    private var lineSize:CGFloat?
+    private var colorArray = [UIColor]()
+
+    override func viewDidAppear(_ animated: Bool) {
+        if colorSliderContainer.subviews.count == 0 {
+            let colorSlider = ColorSlider(orientation: .horizontal, previewSide: .top)
+            colorSlider.frame = colorSliderContainer.bounds
+            colorSliderContainer.addSubview(colorSlider)
+            // Observe ColorSlider events
+            colorSlider.addTarget(self, action: #selector(changedColor(slider:)), for: .valueChanged)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        originSelectTemplateImage = UIImage(named: "border_xs")
+
 
         // Do any additional setup after loading the view.
         cropPickerView.delegate = self
@@ -35,6 +54,7 @@ class BorderViewController: UIViewController {
         picker.delegate = self
         self.picker.allowsEditing = false
 
+        /*
         templateImageView.rx.tapGesture()
             .skip(1)
             .subscribe(onNext: { _ in
@@ -42,7 +62,7 @@ class BorderViewController: UIViewController {
                 self.picker.title = "模板图片"
                 self.present(self.picker, animated: true)
             }).disposed(by: bag)
-        
+        */
         
         cropPickerView.rx.tapGesture()
             .skip(1)
@@ -75,9 +95,7 @@ class BorderViewController: UIViewController {
                     guard let resizeImage = resizeImage(image: imageCrop, targetSize: templateSize) else { return }
                     print(resizeImage.size)
                     self.selectImageView.image = resizeImage.mergeWith(topImage: self.templateImage!)
-                    print(resizeImage.size)
-
-
+                    print("cropPickerView.crop: ",resizeImage.size)
                 }
             }
             .disposed(by: bag)
@@ -90,8 +108,25 @@ class BorderViewController: UIViewController {
             }
             .disposed(by: bag)
     }
-
+    @IBAction func lineChangeEnd(_ sender: Any) {
+        let slider = sender as! UISlider
+        lineSize = CGFloat(slider.value)
+        handleTemplate()
+    }
     
+    //MARK: - ColorSlider
+    // Observe ColorSlider .valueChanged events.
+    @objc func changedColor(slider: ColorSlider) {
+        selectBorderColor = slider.color
+        handleTemplate()
+    }
+    
+    //MARK: - 处理图片
+    func handleTemplate(){
+        //colorArray   = self.colorCube.extractColors(fromImage: originSelectTemplateImage!, withFlags: 1, count: 2)
+        templateImage = OpenCVWrapper.processImage(withOpenCV:originSelectTemplateImage!,mainColor: selectBorderColor,lineSize: lineSize ?? 8.0)
+        templateImageView.image = templateImage
+    }
     func HSFAlert(msg:String){
         let alertController = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
@@ -124,10 +159,8 @@ extension BorderViewController:UIImagePickerControllerDelegate,UINavigationContr
         
         switch picker.title{
         case "模板图片":
-            print(self.colorCube.extractColors(fromImage: info[.originalImage] as! UIImage, withFlags: 1, count: 4))
-            let colorArray = self.colorCube.extractColors(fromImage: info[.originalImage] as! UIImage, withFlags: 1, count: 2)
-            templateImage = OpenCVWrapper.processImage(withOpenCV: info[.originalImage] as? UIImage,mainColor: colorArray.first)
-            templateImageView.image = templateImage
+            originSelectTemplateImage = (info[.originalImage] as! UIImage)
+            handleTemplate()
         case "剪切图片":
             desktopImage = info[.originalImage] as? UIImage
             cropPickerView.image = desktopImage
@@ -136,7 +169,7 @@ extension BorderViewController:UIImagePickerControllerDelegate,UINavigationContr
         }
         dismiss(animated: true)
     }
-
+    
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]

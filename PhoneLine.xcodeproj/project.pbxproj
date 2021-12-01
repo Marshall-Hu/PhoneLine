@@ -18,6 +18,7 @@
 		91926079274E4A7C00BBD5B4 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91926078274E4A7C00BBD5B4 /* OpenCVWrapper.mm */; };
 		9192607B274E4A9800BBD5B4 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9192607A274E4A9800BBD5B4 /* opencv2.framework */; };
 		91926082274F1AA900BBD5B4 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91926081274F1AA900BBD5B4 /* ImageHelper.swift */; };
+		91AC094C275757DC0094EF72 /* border_xs.png in Resources */ = {isa = PBXBuildFile; fileRef = 91AC094B275757DC0094EF72 /* border_xs.png */; };
 		F5706609B4C0EF8AA56FD8C7 /* Pods_PhoneLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1201FF742A0BE184BED9E2FD /* Pods_PhoneLine.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		9192607A274E4A9800BBD5B4 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		9192607E274E4AC800BBD5B4 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		91926081274F1AA900BBD5B4 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		91AC094B275757DC0094EF72 /* border_xs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_xs.png; sourceTree = "<group>"; };
 		E03791152C83110EB67BE203 /* Pods-PhoneLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneLine.release.xcconfig"; path = "Target Support Files/Pods-PhoneLine/Pods-PhoneLine.release.xcconfig"; sourceTree = "<group>"; };
 		EB880DF4422526E0037C8477 /* Pods-PhoneLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneLine.debug.xcconfig"; path = "Target Support Files/Pods-PhoneLine/Pods-PhoneLine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 		91926059274E0A9E00BBD5B4 /* PhoneLine */ = {
 			isa = PBXGroup;
 			children = (
+				91AC094B275757DC0094EF72 /* border_xs.png */,
 				91926080274F1A9600BBD5B4 /* ImageHelper */,
 				91926076274E4A5A00BBD5B4 /* OpenCV */,
 				91926071274E20AD00BBD5B4 /* VC */,
@@ -204,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91AC094C275757DC0094EF72 /* border_xs.png in Resources */,
 				91926067274E0A9F00BBD5B4 /* LaunchScreen.storyboard in Resources */,
 				91926064274E0A9F00BBD5B4 /* Assets.xcassets in Resources */,
 				91926075274E20DA00BBD5B4 /* BorderViewController.xib in Resources */,
@@ -423,6 +427,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhoneLine/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "想要保存图片吗？请同意访问所有图片！";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -460,6 +465,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhoneLine/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "想要保存图片吗？请同意访问所有图片！";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

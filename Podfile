@@ -7,5 +7,5 @@ target 'PhoneLine' do
     pod 'RxGesture'
     pod 'CropPickerView'
     pod 'ColorCubeSwift'
-
+    pod 'ColorSlider', '~> 4.4'
 end

@@ -13,7 +13,7 @@
 
 @interface OpenCVWrapper : NSObject
 
-    + (UIImage *)processImageWithOpenCV:(UIImage*)inputImage mainColor:(UIColor*)inputColor;
+    + (UIImage *)processImageWithOpenCV:(UIImage*)inputImage mainColor:(UIColor*)inputColor lineSize:(CGFloat) inputSize;
 
 @end
 
