@@ -28,9 +28,13 @@ class BorderViewController: UIViewController {
     let picker = UIImagePickerController()
 
     let colorCube = CCColorCube()
-    var selectBorderColor = UIColor()
+    var selectBorderColor = UIColor.red
     private var lineSize:CGFloat?
     private var colorArray = [UIColor]()
+
+    //take Share Image
+    let suiteName = "group.PhoneLine.ShareImage"
+    let templateImageKey = "templateImageKey"
 
     override func viewDidAppear(_ animated: Bool) {
         if colorSliderContainer.subviews.count == 0 {
@@ -44,10 +48,16 @@ class BorderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        originSelectTemplateImage = UIImage(named: "border_xs")
-
-
+        //originSelectTemplateImage = UIImage(named: "border_xs")
+        if let prefs = UserDefaults(suiteName: suiteName) {
+            if let imageData = prefs.object(forKey: templateImageKey) as? Data {
+                DispatchQueue.main.async(execute: { () -> Void in
+                    self.originSelectTemplateImage = UIImage(data: imageData)
+                    self.handleTemplate()
+                    //self.templateImageView.image = self.originSelectTemplateImage
+                })
+            }
+        }
         // Do any additional setup after loading the view.
         cropPickerView.delegate = self
         

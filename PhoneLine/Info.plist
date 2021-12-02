@@ -6,9 +6,7 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeName</key>
-			<string>borderImage</string>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
+			<string></string>
 			<key>LSHandlerRank</key>
 			<string>Default</string>
 			<key>LSItemContentTypes</key>
@@ -56,15 +54,13 @@
 	<array>
 		<dict>
 			<key>UTTypeConformsTo</key>
-			<array>
-				<string>public.item</string>
-			</array>
+			<array/>
 			<key>UTTypeDescription</key>
-			<string>borderImage</string>
+			<string></string>
 			<key>UTTypeIconFiles</key>
 			<array/>
 			<key>UTTypeIdentifier</key>
-			<string>com.raywenderlich.TaskList.TaskListData</string>
+			<string></string>
 			<key>UTTypeReferenceURL</key>
 			<string></string>
 			<key>UTTypeTagSpecification</key>

@@ -19,8 +19,36 @@
 		9192607B274E4A9800BBD5B4 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9192607A274E4A9800BBD5B4 /* opencv2.framework */; };
 		91926082274F1AA900BBD5B4 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91926081274F1AA900BBD5B4 /* ImageHelper.swift */; };
 		91AC094C275757DC0094EF72 /* border_xs.png in Resources */ = {isa = PBXBuildFile; fileRef = 91AC094B275757DC0094EF72 /* border_xs.png */; };
+		91AC0956275897060094EF72 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AC0955275897060094EF72 /* ShareViewController.swift */; };
+		91AC0959275897060094EF72 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AC0957275897060094EF72 /* MainInterface.storyboard */; };
+		91AC095D275897060094EF72 /* PhoneLineShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 91AC0953275897060094EF72 /* PhoneLineShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		91BD48A327589B44002DE64F /* ColorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD48A227589B44002DE64F /* ColorSelectionViewController.swift */; };
 		F5706609B4C0EF8AA56FD8C7 /* Pods_PhoneLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1201FF742A0BE184BED9E2FD /* Pods_PhoneLine.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91AC095B275897060094EF72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9192604F274E0A9E00BBD5B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91AC0952275897060094EF72;
+			remoteInfo = PhoneLineShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91AC0961275897060094EF72 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				91AC095D275897060094EF72 /* PhoneLineShare.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1201FF742A0BE184BED9E2FD /* Pods_PhoneLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +68,13 @@
 		9192607E274E4AC800BBD5B4 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		91926081274F1AA900BBD5B4 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		91AC094B275757DC0094EF72 /* border_xs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_xs.png; sourceTree = "<group>"; };
+		91AC0953275897060094EF72 /* PhoneLineShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PhoneLineShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		91AC0955275897060094EF72 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		91AC0958275897060094EF72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		91AC095A275897060094EF72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91AC09622758972F0094EF72 /* PhoneLine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhoneLine.entitlements; sourceTree = "<group>"; };
+		91AC0963275897380094EF72 /* PhoneLineShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhoneLineShare.entitlements; sourceTree = "<group>"; };
+		91BD48A227589B44002DE64F /* ColorSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSelectionViewController.swift; sourceTree = "<group>"; };
 		E03791152C83110EB67BE203 /* Pods-PhoneLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneLine.release.xcconfig"; path = "Target Support Files/Pods-PhoneLine/Pods-PhoneLine.release.xcconfig"; sourceTree = "<group>"; };
 		EB880DF4422526E0037C8477 /* Pods-PhoneLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneLine.debug.xcconfig"; path = "Target Support Files/Pods-PhoneLine/Pods-PhoneLine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +89,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91AC0950275897060094EF72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				91926059274E0A9E00BBD5B4 /* PhoneLine */,
+				91AC0954275897060094EF72 /* PhoneLineShare */,
 				91926058274E0A9E00BBD5B4 /* Products */,
 				9B32EF42910E180FF6DD2467 /* Pods */,
 				AA2B5E7C3301BD44181E51BD /* Frameworks */,
@@ -71,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				91926057274E0A9E00BBD5B4 /* PhoneLine.app */,
+				91AC0953275897060094EF72 /* PhoneLineShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +122,7 @@
 		91926059274E0A9E00BBD5B4 /* PhoneLine */ = {
 			isa = PBXGroup;
 			children = (
+				91AC09622758972F0094EF72 /* PhoneLine.entitlements */,
 				91AC094B275757DC0094EF72 /* border_xs.png */,
 				91926080274F1A9600BBD5B4 /* ImageHelper */,
 				91926076274E4A5A00BBD5B4 /* OpenCV */,
@@ -128,6 +173,18 @@
 			path = ImageHelper;
 			sourceTree = "<group>";
 		};
+		91AC0954275897060094EF72 /* PhoneLineShare */ = {
+			isa = PBXGroup;
+			children = (
+				91AC0963275897380094EF72 /* PhoneLineShare.entitlements */,
+				91AC0955275897060094EF72 /* ShareViewController.swift */,
+				91BD48A227589B44002DE64F /* ColorSelectionViewController.swift */,
+				91AC0957275897060094EF72 /* MainInterface.storyboard */,
+				91AC095A275897060094EF72 /* Info.plist */,
+			);
+			path = PhoneLineShare;
+			sourceTree = "<group>";
+		};
 		9B32EF42910E180FF6DD2467 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,15 +215,34 @@
 				91926054274E0A9E00BBD5B4 /* Frameworks */,
 				91926055274E0A9E00BBD5B4 /* Resources */,
 				8D20E2A7F2F3FECAB98ACFA7 /* [CP] Embed Pods Frameworks */,
+				91AC0961275897060094EF72 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				91AC095C275897060094EF72 /* PBXTargetDependency */,
 			);
 			name = PhoneLine;
 			productName = PhoneLine;
 			productReference = 91926057274E0A9E00BBD5B4 /* PhoneLine.app */;
 			productType = "com.apple.product-type.application";
+		};
+		91AC0952275897060094EF72 /* PhoneLineShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91AC095E275897060094EF72 /* Build configuration list for PBXNativeTarget "PhoneLineShare" */;
+			buildPhases = (
+				91AC094F275897060094EF72 /* Sources */,
+				91AC0950275897060094EF72 /* Frameworks */,
+				91AC0951275897060094EF72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhoneLineShare;
+			productName = PhoneLineShare;
+			productReference = 91AC0953275897060094EF72 /* PhoneLineShare.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -181,6 +257,9 @@
 					91926056274E0A9E00BBD5B4 = {
 						CreatedOnToolsVersion = 13.1;
 						LastSwiftMigration = 1310;
+					};
+					91AC0952275897060094EF72 = {
+						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
@@ -198,6 +277,7 @@
 			projectRoot = "";
 			targets = (
 				91926056274E0A9E00BBD5B4 /* PhoneLine */,
+				91AC0952275897060094EF72 /* PhoneLineShare */,
 			);
 		};
 /* End PBXProject section */
@@ -212,6 +292,14 @@
 				91926064274E0A9F00BBD5B4 /* Assets.xcassets in Resources */,
 				91926075274E20DA00BBD5B4 /* BorderViewController.xib in Resources */,
 				91926062274E0A9E00BBD5B4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91AC0951275897060094EF72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91AC0959275897060094EF72 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +361,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91AC094F275897060094EF72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91AC0956275897060094EF72 /* ShareViewController.swift in Sources */,
+				91BD48A327589B44002DE64F /* ColorSelectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91AC095C275897060094EF72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91AC0952275897060094EF72 /* PhoneLineShare */;
+			targetProxy = 91AC095B275897060094EF72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		91926060274E0A9E00BBD5B4 /* Main.storyboard */ = {
@@ -290,6 +395,14 @@
 				91926066274E0A9F00BBD5B4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		91AC0957275897060094EF72 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91AC0958275897060094EF72 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -415,9 +528,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB880DF4422526E0037C8477 /* Pods-PhoneLine.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PhoneLine/PhoneLine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3295JJ3P97;
@@ -453,9 +568,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E03791152C83110EB67BE203 /* Pods-PhoneLine.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PhoneLine/PhoneLine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3295JJ3P97;
@@ -486,6 +603,58 @@
 			};
 			name = Release;
 		};
+		91AC095F275897060094EF72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PhoneLineShare/PhoneLineShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3295JJ3P97;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhoneLineShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PhoneLineShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Marshaii.PhoneLine.PhoneLineShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91AC0960275897060094EF72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PhoneLineShare/PhoneLineShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3295JJ3P97;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhoneLineShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PhoneLineShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Marshaii.PhoneLine.PhoneLineShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -503,6 +672,15 @@
 			buildConfigurations = (
 				9192606C274E0A9F00BBD5B4 /* Debug */,
 				9192606D274E0A9F00BBD5B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91AC095E275897060094EF72 /* Build configuration list for PBXNativeTarget "PhoneLineShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91AC095F275897060094EF72 /* Debug */,
+				91AC0960275897060094EF72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
